@@ -206,30 +206,51 @@
 >
 >
 >
-># GIThub 연결하기
->
->  6. github에서 new repository 만들기
->
->
->
->  2. ![image-20220413162847537](https://user-images.githubusercontent.com/38197124/163128666-7f1203f1-1cbe-4186-845a-0755d42f424f.png)
->
->     * 복사 후 bash에 입력
->
->       ```bash
->       git remote add origin https://github.com/yyci12/TIL.git
->       ```
->
->  3. 연결확인
->
->     ```bash
->     $ git remote -v
->     
->     orighin https://github.com/yyci12/TIL.git (fetch)
->     orighin https://github.com/yyci12/TIL.git (push)
->     ```
->
->
->
->
+# GIThub 연결후 커밋하기
+
+1. github에서 new repository 만들기
+
+
+
+ 2. ![image-20220413162847537](https://user-images.githubusercontent.com/38197124/163128666-7f1203f1-1cbe-4186-845a-0755d42f424f.png)
+
+    * 복사 후 bash에 입력
+
+      ```bash
+      git remote add origin https://github.com/yyci12/TIL.git
+      ```
+
+ 3. 연결확인
+
+    ```bash
+    $ git remote -v
+    ```
+
+4. 커밋
+
+   ```bash
+   $ git commit -m "first commit"
+   ```
+
+5. Status
+
+   ```bash
+   $ git status
+   ```
+
+6. Push
+
+   ```bash
+   $ git push origin master
+   ```
+
+7. 업로드 확인
+
+   ```bash
+   $ git log --oneline
+   ```
+
+8. 업로드 완료
+
+   ![image](https://user-images.githubusercontent.com/38197124/163133572-210b2d4e-c5a0-4826-8bce-2e2c8c65e9a8.png)
 
