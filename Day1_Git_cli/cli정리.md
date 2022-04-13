@@ -226,9 +226,10 @@
     $ git remote -v
     ```
 
-4. 커밋
+4. add 후 커밋
 
    ```bash
+   $ git add .
    $ git commit -m "first commit"
    ```
 
