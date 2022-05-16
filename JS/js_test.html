@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #textarea{
+            background-color: yellow;
+            resize: none;
+            width: 20%;
+            height: 40%;
+        }
+    </style>
+    <script>
+        function output_val(val,val2,val3){
+            let doc = document.getElementById("textarea");
+            doc.value = "구입자 = "+val+"\n"+
+                        "구입 상품 = "+val2+"\n"+
+                        "가격 = " +val3 +"만원\n";
+        }
+        function output_val2(){
+            let userName = document.getElementsByTagName("input").value;
+
+            let product = document.getElementById("product").value;
+
+            let price = document.getElementById("price")[0].value;
+
+            const area = document.getElementById("textarea");
+
+            area.innerHTML += "구입자: " +userName+"님<br>";
+            area.innerHTML += "구입상품: " +product+"님<br>";
+            area.innerHTML += "구매가격: " +price+"님<br>";
+        }
+    </script>
+</head>
+<body>
+    <h1>연습1</h1>
+    <label for="buyer">구매자:</label>
+    <input type="text" id="buyer" value="" placeholder="구매자의 이름을 입력하세요"><br><br>
+
+    <label for="product">상품명:</label>
+    <input type="text" id="product" value="" placeholder="구매 상품명을 입력하세요"><br><br>
+
+    <label for="price">가격:</label>
+    <input type="text" id="price" value="" placeholder="구매 가격을 입력하세요."><br><br>
+    
+    <button id="btn1" onclick="output_val(buyer.value,product.value,price.value);">입력값 출력하기</button><br><br>
+    <textarea id="textarea" cols="30" rows="10"></textarea>
+    
+
+</body>
+</html>

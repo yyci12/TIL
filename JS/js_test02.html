@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #div1{
+            background-color: white;
+            width: 100px;
+            height: 100px;
+            border:1px solid black;
+        }
+        #div2{
+            background-color: black;
+            width: 100px;
+            height: 100px;
+            border:1px solid black;
+        }
+    </style>
+    <script>
+        function change_color(){
+            let doc = document.getElementById("color");
+            console.log(doc);
+            let div = document.getElementById("div1");
+            div.style.backgroundColor = doc.value;
+        }
+    </script>
+</head>
+<body>
+    <h1>문제1. 색상 선택 후 변경 버튼을 클릭하면 색상이 변경되도록 만들어 보시오</h1>
+    <div id="div1"></div><br>
+    <input type="color" id="color">
+    <button onclick="change_color();">변경</button>
+
+    <hr>
+    <br><br>
+
+    <h2>문제2. 버튼에 따른 크기 조절이 가능하게 만들어 보시오</h2>
+    <div id="div2">
+
+    </div>
+    <button onclick="change_size(50);">50x50</button>
+    <button onclick="change_size(100);">100x100(원본)</button>
+    <button onclick="change_size(200);">200x200</button>
+    <script>
+        function change_size(val){
+            let doc = document.getElementById("div2");
+            doc.style.width = val+"px";
+            doc.style.height = val+"px";
+        }
+    </script>
+</body>
+</html>
