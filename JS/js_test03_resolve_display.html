@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        fieldset{
+           width: 500px;
+           background-color: lightgray;
+           text-align: center;
+        }
+        .box{
+            width: 500px;
+            height: 50px;
+            background-color: rgb(255,213,0);
+            margin: 10px;
+            padding: 10px;
+            display: none;
+        }
+        input{
+            vertical-align: middle;
+        }
+    </style>
+    <script>
+        function select_raido(val){
+            if(val.checked == true && val.value == "title"){
+                document.getElementById("titleBox").style.display ="block";
+                document.getElementById("dateBox").style.display ="none";
+                document.getElementById("writerBox").style.display ="none";
+            }else if(val.checked == true && val.value == "date"){
+                document.getElementById("titleBox").style.display ="none";
+                document.getElementById("dateBox").style.display ="block";
+                document.getElementById("writerBox").style.display ="none";
+            }else if(val.checked == true && val.value == "writer"){
+                document.getElementById("titleBox").style.display ="none";
+                document.getElementById("dateBox").style.display ="none";
+                document.getElementById("writerBox").style.display ="block";
+            }
+           
+        }   
+    </script>
+</head>
+<body>
+    <h2>연습2</h2>
+    <fieldset>
+        <legend>검색할 항목을 선택하세요.</legend>
+        <input type="radio" name="category" value="title" id="title" onclick="select_raido(this);"><label for="title">제목</label>
+        <input type="radio" name="category" value="date" id = "date" onclick="select_raido(this);"><label for="date">날짜</label>
+        <input type="radio" name="category" value="writer" id="writer" onclick="select_raido(this);"><label for="writer">작성자</label>
+        </fieldset> 
+        <hr>
+
+        <div id="titleBox" class="box">
+            <label>검색할 제목를 입력하세요 : </label>
+            <br>
+            <input type="text" name="title">
+            <input type="submit" value="검색" ></input>
+        </div>
+        
+        <div id="dateBox" class="box">
+            <label>검색할 날짜를 선택하세요: </label>
+            <br>
+            <input type="date"> - <input type="date">
+            <input type="submit" value="검색"></input>
+        </div>
+        
+        <div id="writerBox" class="box">
+            <label>검색할 작성자 아이디를 입력하세요 : </label>
+            <br>
+            <input type="text">
+            <input type="submit" value="검색"></input>
+        </div>
+</body>
+</html>
