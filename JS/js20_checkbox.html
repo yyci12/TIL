@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>checkbox</title>
+    <style>
+        #colorbox{
+            width: 320px;
+            height: 320px;
+            position: relative;
+        }
+        #red,#yellow,#blue,#black{
+            width: 150px;
+            height: 150px;
+            border: 1px solid black;
+            position: absolute;
+        }
+        #yellow{ left: 160px;}
+        #blue{ top: 160px;}
+        #black{left: 160px; top: 160px;}
+    </style>
+    <script>
+        function allsel(check){
+            let chks = document.getElementsByName("chk");
+
+            for(let i=0;i<chks.length;i++){
+                chks[i].checked = check;
+            }
+        }
+        function sel(){
+            let chks = document.getElementsByName("chk");
+
+            if(chkChecked(chks) > 0){
+                for(let i=0; i<chks.length;i++){ 
+                    if(chks[i].checked){
+                        document.getElementById(chks[i].value).style.backgroundColor = chks[i].value;
+                    }else{
+                        document.getElementById(chks[i].value).style.backgroundColor = "white";
+                    }
+                }
+            }
+            else{
+                alert("체크된게 없습니다.");
+            }
+        }
+
+        function chkChecked(chks){
+            let num = 0;
+            for(let i=0; i<chks.length;i++){ 
+                if(chks[i].checked){
+                    num++;
+                }
+            }
+            return num;
+        }
+
+        function clearDiv(){
+            allsel(false);
+            document.getElementsByName("all")[0].checked=false;
+
+            let colorbox = document.querySelectorAll("#colorbox > div");
+            for(let i=0;i<colorbox.length;i++){
+                colorbox[i].style.backgroundColor = "white";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="colorbox">
+        <div id="red">red</div>
+        <div id="yellow">yellow</div>
+        <div id="blue">blue</div>
+        <div id="black">black</div>
+    </div>
+
+    <div id="base">
+        <form>
+            <input type="checkbox" name="all" onclick="allsel(this.checked);" id="abcde"><label for = "abcde">전체선택</label><br>
+
+            <input type="checkbox" name="chk" value="red" id="a"><label for = "a">빨강</label><br>
+            <input type="checkbox" name="chk" value="yellow" id="ab"><label for = "ab">노랑</label><br>
+            <input type="checkbox" name="chk" value="blue" id="abc"><label for = "abc">파랑</label><br>
+            <input type="checkbox" name="chk" value="black" id="abcd"><label for = "abcd">검정 </label><br>
+            
+            <input type="button" value="선택" onclick="sel();">
+            <input type="button" value="초기화" onclick="clearDiv();">
+        </form>
+    </div>
+</body>
+</html>
