@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        function click01(){
+            let inputval = $("input:text").val();
+            alert(inputval);
+        }
+        function click02(){
+            let inputval = $("input:radio").val();
+            $("#view").html("<b>"+inputval+"</b>");
+        }
+        function click03(){
+            let inputval = $("input:checkbox").val();
+            $("#view").html(inputval);
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <input type="text">
+        <input type="button" value="선택" onclick="click01();"><br>
+        <input type="radio" value="22/05/05" onclick="click02();"> 어린이날?
+        <input type="checkbox" value="123" onclick="click03();">
+        <div id ="view"></div>
+    </form>
+</body>
+</html>
