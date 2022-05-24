@@ -33,7 +33,9 @@
             //체크박스가 전체선택 되어진 상태에서 하나라도
             //체크해제하면 전체선택 버튼의 체크를 해제
             $("input[name=chk]").click(function(){
-                
+                if($("input[name=chk]").length != $("input[name=chk]:checked").length){
+                    $("")
+                }
             })
         });
        function allChk(bool){

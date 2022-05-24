@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            border: 1px solid red;
+            width: 400px;
+            height: 200px;
+            padding: 20px;
+            overflow: auto;
+        }
+        div p:first-child{
+            float: left;
+            border: 1px solid blue;
+            width: 150px;
+            height: 150px;
+            text-align: center;
+            line-height : 150px;
+        }
+        div p:last-child{
+            float: right;
+            border: 1px solid blue;
+            width: 150px;
+            height: 150px;
+            text-align: center;
+            line-height : 150px;
+        }
+    </style>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        /*
+            이벤트 전파 : 요소들이 서로 포함관계인 경우 요소중 하나에 이벤트가 발생하면
+                          중첩이된 요소들도 이벤트가 전파된다.  
+            이벤트 전파 막기
+                -stopPropagation() : 이벤트 전파 막기
+                -preventDfault() : 이벤트에 의한 기본동작 막기
+                -return false;              
+        */
+        $(function(){
+            $("a:eq(0)").click(function(e){
+                alert("a클릭");
+                e.stopPropagation();
+                //e.preventDefault();
+                //return false;
+            });
+            $("p").click(function(e){
+                alert("p클릭!");
+            });
+            $("div").click(function(e){
+                alert("div클릭");
+            });
+
+            $("a:eq(1)").bind({
+                "mouseover":function(){
+                    $(this).css("background-color","pink");
+                },"mouseout":function(){
+                    $(this).css("background-color","white");
+                }
+            });
+            //mouseout이 발생하면 배경색을 sky
+            $("button").click(function(){
+                $("body").append("<p>새로 추가된 p태그</p>");
+            });
+
+            $("body").on("click",">p",function(){
+                console.log("ㅇㅇ");
+            });
+            $("span").click(function(){
+                alert('span클릭');
+                $("a:eq(1)").unbind();
+            })
+        });
+    </script>
+    
+</head>
+<body>
+    <div>
+        <p>
+            <a href="https://naver.com">클릭!</a>
+        </p>
+        <p>
+            클릭
+        </p>
+    </div>
+    <div>
+        <p>
+            <a href="https://google.com">클릭!</a>
+        </p>
+        <p>
+            클릭
+        </p>
+    </div>
+    <span>이벤트 해제</span>
+    <button>클릭</button>
+</body>
+</html>
