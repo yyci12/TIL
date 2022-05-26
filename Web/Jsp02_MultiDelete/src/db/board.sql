@@ -1,0 +1,11 @@
+CREATE  table MDBOARD(
+	SEQ INT auto_increment primary key,
+	WRITER VARCHAR(500) not null,
+	TITLE VARCHAR(1000) noT null,
+	CONTENT VARCHAR(2000) not null,
+	REGDATE DATE not NULL
+);
+
+INSERT into MDBOARD VALUES(null,'관리자','TESTING','TSET_CASE01',NOW());
+
+SELECT *FROM MDBOARD ;
