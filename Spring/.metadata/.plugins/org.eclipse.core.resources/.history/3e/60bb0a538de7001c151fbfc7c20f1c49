@@ -1,0 +1,5 @@
+package com.test08;
+
+public interface Tv {
+
+}

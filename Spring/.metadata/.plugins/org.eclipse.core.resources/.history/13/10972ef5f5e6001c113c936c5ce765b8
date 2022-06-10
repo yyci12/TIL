@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<!-- id= lee 이순신,20000000 생성자 이용해 초기화 -->
+	<bean id="lee" class="com.test04.Emp">
+		<constructor-arg value="이순신"></constructor-arg>
+		<constructor-arg value="20000000"></constructor-arg>
+	</bean>
+	
+	<!-- id= lee 홍길동,25000000 setter 이용해 초기화 -->
+		<bean id="hong" class="com.test04.Emp">
+		<property name="name" value="홍길동"></property>
+		<property name="salary" value = "25000000"></property>
+	</bean>
+</beans>

@@ -1,0 +1,10 @@
+package com.test07;
+
+public class Developer {
+
+	public Developer() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+}

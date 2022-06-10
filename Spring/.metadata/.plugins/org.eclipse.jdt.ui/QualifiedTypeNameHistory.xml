@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="com.test07.Developer"/>
+    <fullyQualifiedTypeName name="com.test07.Engineer"/>
+    <fullyQualifiedTypeName name="java.lang.Object"/>
+    <fullyQualifiedTypeName name="com.test08.SamsungTV"/>
+    <fullyQualifiedTypeName name="com.test08.LgTv"/>
+    <fullyQualifiedTypeName name="com.test08.BeanFactory"/>
+    <fullyQualifiedTypeName name="com.test09.SamsungTV"/>
+    <fullyQualifiedTypeName name="com.test01.BeanTest"/>
+    <fullyQualifiedTypeName name="java.util.Date"/>
+    <fullyQualifiedTypeName name="com.test01.MyClass"/>
+    <fullyQualifiedTypeName name="java.util.Set"/>
+    <fullyQualifiedTypeName name="java.util.Map"/>
+    <fullyQualifiedTypeName name="java.util.Collection"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="com.test02.MyFood"/>
+    <fullyQualifiedTypeName name="com.test01.NickName"/>
+    <fullyQualifiedTypeName name="com.test01.MyNickName"/>
+    <fullyQualifiedTypeName name="com.test02.School"/>
+    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Qualifier"/>
+    <fullyQualifiedTypeName name="org.springframework.stereotype.Component"/>
+    <fullyQualifiedTypeName name="org.springframework.context.ApplicationContext"/>
+    <fullyQualifiedTypeName name="org.springframework.context.support.ClassPathXmlApplicationContext"/>
+    <fullyQualifiedTypeName name="com.test03.TV"/>
+</qualifiedTypeNameHistroy>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<bean id="lee" class="com.test07.Emp" c:name="이순신" c:salary = "3000000"></bean>
+	<bean id="lee_2" class="com.test07.Developer" c:emp-ref="lee" c:dept="개발팀"></bean>
+
+</beans>

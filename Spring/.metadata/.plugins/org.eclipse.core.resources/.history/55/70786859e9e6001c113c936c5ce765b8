@@ -1,0 +1,22 @@
+package com.test01;
+
+public class MessageBeanimpl implements MessageBean {
+	private String fruit;
+	private int cost;
+	@Override
+	public void sayHello() {
+		System.out.println("과일: "+fruit +"\t 가격: "+cost);
+		
+	}
+	
+	public MessageBeanimpl() {
+		this.fruit = "banana";
+		this.cost =5000;
+	}
+	
+	public MessageBeanimpl(String fruit,int cost) {
+		this.fruit = fruit;
+		this.cost = cost;
+	}
+	
+}

@@ -1,0 +1,28 @@
+package com.test08;
+
+public class SamsungTV implements Tv {
+
+	@Override
+	public void powerOn() {
+		System.out.println();
+	}
+
+	@Override
+	public void powerOff() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void volUp() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void volDown() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

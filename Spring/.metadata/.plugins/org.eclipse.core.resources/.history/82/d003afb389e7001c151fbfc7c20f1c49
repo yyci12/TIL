@@ -1,0 +1,8 @@
+package com.test07;
+
+public class Developer {
+	private Emp emp;
+	private String dept;
+	
+	
+}

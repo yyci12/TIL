@@ -1,0 +1,15 @@
+package com.test04;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class Mtest {
+
+	public static void main(String[] args) {
+		//생성된 bean 2개를 가져다
+		//객체에 저장된값 확인
+		ApplicationContext factory = new ClassPathXmlApplicationContext("com/test04/applicationContext.xml");
+		factory lee  = (factory)factory.getBean("lee");
+	}
+
+}

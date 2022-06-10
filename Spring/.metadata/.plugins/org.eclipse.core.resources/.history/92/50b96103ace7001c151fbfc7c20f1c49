@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<bean id="myClass" class="com.test01.MyClass"/>
+		<bean id="date" class="java.util.Date">
+			<property name="year" value="122"></property>
+			<property name="month" value="1"></property>
+			<property name="date" value="1"></property>
+		</bean>	
+	<bean id="beanTest" class="com.test01.BeanTest">
+		
+		<!-- public beanTest(Date date) 호출 -->
+		<constructor-arg ref="date"></constructor-arg>
+		
+		<!--public void setMyClass(MyClass myclass) 호출  -->
+		<property name="myClass" ref="myClass"></property>
+		
+		<!--public void setDate(Date date) 호출  -->
+		<property name="date" ref="date"></property>
+		
+		<!--public void setNumber(int num) 호출  -->
+		<property name="number">
+			<value type="double">25.11</value>
+		</property>
+		
+		<!--public void setArray(String[] arr) 호출  -->
+		<property name="array" >
+			<array>
+				<value>양</value>
+				<value>윤</value>
+				<value>열</value>
+			</array>
+		</property>
+		
+		<!--public void setList(String[] list) 호출  -->
+		<property name="list">
+			<list>
+				<value>리</value>
+				<value>스</value>
+				<value>트</value>
+			</list>
+		</property>
+		
+		<!--public void setList(String[] list) 호출  -->
+		<property name="set">
+			<set>
+				<value>s</value>
+				<value>e</value>
+				<value>t</value>
+				<value>t</value>
+			</set>
+		</property>
+		
+		<!--public void setMap(Map<String,String>map) 호출  -->
+		<property name="map">
+			<map>
+			
+				<key></key>
+				<value></value>
+
+				<key></key>
+				<value></value>
+				
+				<key></key>
+				<value></value>
+				
+			</map>
+		</property>
+	</bean>
+</beans>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<bean id="lee" class="com.test02.Student">
+		<property name="name" value="이창진"></property>
+		<property name="addr" value="경기도 화성시"></property>
+		<property name="age" value="19"></property>
+	</bean>
+	
+	<bean id="kim" class="com.test02.Student">
+		<property name="name" value="김창진"></property>
+		<property name="addr" value="서울시 강남구"></property>
+		<property name="age" value="29"></property>
+	</bean>
+</beans>
