@@ -1,0 +1,13 @@
+DROP  table MYBOARD ;
+
+CREATE table MYBOARD (
+	MYNO INT auto_increment primary key,
+	MYNAME VARCHAR(1000) not null,
+	MYTITLE VARCHAR(2000) noT null,
+	MYCONTENT VARCHAR(4000) not null,
+	MYDATE DATE not NULL
+);
+
+INSERT into MYBOARD VALUES(null,'관리자','스프링 테스트','SPRING_MVC',NOW());
+
+SELECT * from MYBOARD M ;
