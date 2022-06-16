@@ -37,7 +37,7 @@
 			</c:otherwise>
 		</c:choose>
 		<tr>
-			<td colspan="4"><input type="button" value="글작성"></td>
+			<td colspan="4"><input type="button" value="글작성" onclick="location.href='./insertform'"></td>
 		</tr>
 	</table>
 

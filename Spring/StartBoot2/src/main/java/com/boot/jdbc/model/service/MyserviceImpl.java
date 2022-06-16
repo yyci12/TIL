@@ -30,19 +30,19 @@ public class MyserviceImpl implements MyService{
 	@Override
 	public int insert(MyDto dto) {
 		// TODO Auto-generated method stub
-		return 0;
+		return myBoardMapper.insert(dto);
 	}
 
 	@Override
 	public int update(MyDto dto) {
 		// TODO Auto-generated method stub
-		return 0;
+		return myBoardMapper.update(dto);
 	}
 
 	@Override
 	public int delete(int myno) {
 		// TODO Auto-generated method stub
-		return 0;
+		return myBoardMapper.delete(myno);
 	}
 
 }
