@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<script src="https://cdn.anychart.com/releases/v8/js/anychart-base.min.js"></script>
+<script src="https://cdn.anychart.com/releases/v8/js/anychart-tag-cloud.min.js"></script>
+<script>
+    anychart.onDocumentReady(function () {
+        var data = [
+            {
+                "x": "IT", // select * from ** where keyword
+                "value": 10, //count
+                category: "Sino-Tibetan"
+            },
+            {
+                "x": "JVM",
+                "value": 100,
+                category: "Indo-European"
+            },
+            {
+                "x": "소프트웨어",
+                "value": 50,
+                category: "Indo-European"
+            },
+            {
+                "x": "JAVA",
+                "value": 1000,
+                category: "Indo-European"
+            }, {
+                "x": "C++",
+                "value": 40,
+                category: "Afro-Asiatic"
+            }, {
+                "x": "HTML",
+                "value": 1500,
+                category: "Afro-Asiatic"
+            }
+        ];
+        var chart = anychart.tagCloud(data);
+        chart.angles([0]);
+        chart.container("container");
+        // chart.getCredits().setEnabled(false);
+        chart.draw();
+    });
+    </script>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="chart-area">
+        <div id="container" style="width:500px; height: 500px;"></div>
+    </div>
+    <script>
+        (function(d, s, id) {
+            if (d.getElementById(id)) {
+                if (window.__TOMORROW__) {
+                    window.__TOMORROW__.renderWidget();
+                }
+                return;
+            }
+            const fjs = d.getElementsByTagName(s)[0];
+            const js = d.createElement(s);
+            js.id = id;
+            js.src = "https://www.tomorrow.io/v1/widget/sdk/sdk.bundle.min.js";
+
+            fjs.parentNode.insertBefore(js, fjs);
+        })(document, 'script', 'tomorrow-sdk');
+        </script>
+
+        <div class="tomorrow"
+           data-location-id="065512"
+           data-language="KO"
+           data-unit-system="METRIC"
+           data-skin="light"
+           data-widget-type="upcoming"
+           style="padding-bottom:22px;position:relative;"
+        >
+          <a
+            href="https://www.tomorrow.io/weather/"
+            rel="nofollow noopener noreferrer"
+            target="_blank"
+            style="position: absolute; bottom: 0; transform: translateX(-50%); left: 50%;"
+          >
+            <img
+              alt="Powered by Tomorrow.io"
+              src="https://weather-website-client.tomorrow.io/img/powered-by-tomorrow.svg"
+              width="140"
+              height="15"
+            />
+          </a>
+        </div>
+</body>
+</html>
